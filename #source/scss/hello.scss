@@ -1,0 +1,95 @@
+// <HELLO>======================================================================
+
+.hello {
+   padding: 38px 0px 70px 0px;
+   @media (max-width: $md1+px) {
+      padding: 0px 0px 70px 0px;
+   }
+   @media (max-width: $md3+px) {
+      padding: 0px 0px 60px 0px;
+   }
+
+   // .hello__container
+
+   &__container {
+      display: flex;
+      @media (max-width: $md3+px) {
+         text-align: center; 
+         align-items: center;          
+         flex-direction: column-reverse; 
+      }
+   }
+
+   // .hello__content
+
+   &__content {
+      align-items: flex-start;
+      padding: 18px 110px 0px 0px;
+      flex: 1 1 auto;
+      *:last-child {
+         margin-bottom: 0;
+      }
+      @media (max-width: $md1+px) {
+         padding: 18px 50px 0px 0px;
+      }
+      @media (max-width: $md3+px) {
+         padding: 0px 0px 0px 0px;
+      }
+   }
+
+   // .hello__title
+
+   &__title {
+      margin: 0px 0px 25px 0px;
+      @media (max-width: $md3+px) {
+         margin: 0px 0px 20px 0px;
+      }
+   }
+
+   // .hello__text
+
+   &__text {
+      margin: 0px 0px 35px 0px;
+      @media (max-width: $md3+px) {
+         padding: 0 15px;
+         margin: 0px 0px 25px 0px;
+      }
+   }
+
+   // .hello__btn
+
+   &__btn {
+      @media (max-width: $md3+px) {
+         margin: 0px 0px 20px 0px;
+      }
+   }
+
+   // .hello__avatar
+
+   &__avatar {      
+      height: 290px;
+      width: 243px;
+      border-radius: 50%;
+      overflow: hidden;
+      box-shadow: -5px 5px 0px 0px #edf7fa;
+      
+      img {
+         max-width: 100%;
+         transform: scale(1.2);
+         transition: all 0.5s ease 0.1s;
+         @media (min-width: $md2+px) {
+            &:hover {
+               transform: scale(1.5);
+            }
+         }    
+      }     
+      @media (min-width: $md3+px) {
+         flex: 0 0 243px; 
+      }
+      @media (max-width: $md3+px) {
+         width: 170px;
+         height: 230px;  
+         margin: 0px 0px 40px 0px;
+      }
+   }
+}

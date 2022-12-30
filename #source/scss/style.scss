@@ -1,0 +1,74 @@
+//<МИКСИНЫ>======================================================================
+// @import "mixins"; 
+
+//<ШРИФТЫ>=========================================================================
+//<Подключаем шрифты>=============================================================
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;900&family=Roboto:wght@400;700&display=swap');
+//</Подключаем шрифты>=============================================================
+
+//<Иконочные шрифты>=============================================================
+// @import "icons";
+
+//<Шрифт по умолчанию>=============================================================
+$fontFamily: Heebo;
+
+// <ПЕРЕМЕННЫЕ>======================================================================
+$minWidth: 320px;
+$maxWidth: 1152;
+$maxWidthContainer: 856;
+$md1: $maxWidthContainer+12;
+$md2: 991.98;
+$md3: 767.98;
+$md4: 479.98;
+
+
+body {
+   color: #21243d;
+   font-size: 14px;
+   font-family: $fontFamily;
+
+   &._lock {
+      overflow: hidden;
+   }
+}
+
+
+// <ОБОЛОЧКА>======================================================================
+.wrapper {
+   width: 100%;
+   min-height: 100%;
+   overflow: hidden;
+   display: flex;
+   flex-direction: column;   
+}
+
+._container {
+   max-width: $maxWidthContainer + px;
+   margin: 0 auto;
+
+   @media (max-width: $md1+px) {
+      max-width: 970px;
+   }
+
+   @media (max-width: $md2+px) {
+      max-width: 750px;
+   }
+
+   @media (max-width: $md3+px) {
+      max-width: none;
+      padding: 0 10px;
+   }
+}
+
+// <СТИЛИ БЛОКОВ>======================================================================
+@import "reset.scss";
+@import "header.scss";
+@import "hello.scss";
+@import "recent-posts.scss";
+@import "featured-works.scss";
+@import "footer.scss";
+@import "blog.scss";
+@import "article.scss";
+@import "ui.scss";
+
+
